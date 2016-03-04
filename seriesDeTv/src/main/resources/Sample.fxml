@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="U.seriesDeTv.SampleController">
    <center>
       <AnchorPane prefHeight="476.0" prefWidth="608.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="80.0" layoutY="57.0" text="Serie" />
             <TextField fx:id="nomSerie" layoutX="140.0" layoutY="52.0" prefHeight="26.0" prefWidth="252.0" />
             <Button layoutX="442.0" layoutY="52.0" mnemonicParsing="false" onAction="#clickBuscar" text="Buscar" />
-            <MenuButton fx:id="menuButton" layoutX="182.0" layoutY="147.0" mnemonicParsing="false" onAction="#clicMenuButton" prefHeight="26.0" prefWidth="323.0" text="MenuButton">
+            <MenuButton fx:id="menuButton" layoutX="182.0" layoutY="147.0" mnemonicParsing="false" onAction="#clicMenuButton" prefHeight="26.0" prefWidth="323.0" text="Tria Temporada">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
                 <MenuItem mnemonicParsing="false" text="Action 2" />
