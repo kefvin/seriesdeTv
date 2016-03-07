@@ -12,12 +12,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 import javafx.scene.control.ListView;
@@ -59,10 +57,17 @@ public class SampleController {
 		navi. findElement(By.className("ict")).click();
 		
 		for(WebElement element: navi.findElements(By.xpath("//h2/u"))) {
-			temporadas.add(new MenuItem(element.getText()));
+			MenuItem p = new MenuItem(element.getText());
+			p.setOnAction(actionEvent -> { carregarCapitols(p.getText(), navi); } );
+			temporadas.add(p);
 		}
 		menuButton.getItems().clear();
 		menuButton.getItems().addAll(temporadas);
+		
+	}
+	
+	private void carregarCapitols(String text, WebDriver navi) {
+		navi. findElement(By.cssSelector("#zebra tbody tr td a")).click();
 		
 	}
 	// Event Listener on MenuButton[#menuButton].onAction
